@@ -1,0 +1,12 @@
+// Este arquivo contém erros semânticos de ESCOPO de propósito.
+
+int x = 5;
+int x = 10;      // Erro: 'x' já foi declarada neste escopo
+
+print(y);        // Erro: 'y' nunca foi declarada
+
+if (x > 0) {
+    int z = 1;
+    print(z);
+}
+print(z);         // Erro: 'z' foi declarada dentro do bloco do if e não existe aqui fora

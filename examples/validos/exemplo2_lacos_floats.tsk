@@ -1,0 +1,33 @@
+// Exemplo 2: laço for, aritmética com float e concatenação de strings
+
+string projeto = "Compilador TaskLang";
+string prefixo = "Tarefa - ";
+
+task "Levantamento de requisitos" priority 1;
+task "Definicao da gramatica" priority 2;
+task "Implementacao do interpretador" priority 2;
+task "Testes e documentacao" priority 3;
+
+for (int i = 1; i <= 3; i = i + 1) {
+    print("Etapa do cronograma:");
+    print(i);
+}
+
+float horasGastas = 12.5;
+float horasEstimadas = 40.0;
+float percentual = horasGastas / horasEstimadas * 100.0;
+
+if (percentual >= 50.0) {
+    print("Mais da metade do orcamento de horas ja foi usado.");
+} else {
+    print("Ainda ha bastante orcamento de horas disponivel.");
+}
+
+assign "Levantamento de requisitos" to "Mariana";
+assign "Definicao da gramatica" to "Mariana";
+complete "Levantamento de requisitos";
+
+string mensagem = prefixo + projeto;
+print(mensagem);
+
+list tasks;

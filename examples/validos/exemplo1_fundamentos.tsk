@@ -1,0 +1,34 @@
+// Exemplo 1: tipos primitivos, controle de fluxo e comandos da DSL
+
+int prioridadeMaxima = 3;
+string disciplina = "Compiladores";
+float progresso = 0.0;
+
+print("Bem-vindo ao TaskLang!");
+print(disciplina);
+
+task "Implementar analisador lexico" priority 1;
+task "Implementar analisador sintatico" priority 2;
+task "Escrever relatorio final" priority 3;
+
+assign "Implementar analisador lexico" to "Mariana";
+assign "Implementar analisador sintatico" to "Mariana";
+
+int contador = 1;
+while (contador <= prioridadeMaxima) {
+    print("Processando prioridade:");
+    print(contador);
+    contador = contador + 1;
+}
+
+if (prioridadeMaxima >= 3) {
+    print("Projeto com carga alta de tarefas.");
+} else {
+    print("Projeto tranquilo.");
+}
+
+complete "Implementar analisador lexico";
+progresso = 1.0 / 3.0;
+print(progresso);
+
+list tasks;

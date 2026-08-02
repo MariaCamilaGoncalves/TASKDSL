@@ -1,0 +1,18 @@
+// Este arquivo contém erros semânticos de TIPO de propósito.
+
+int x = 10;
+string nome = "Mariana";
+
+// Erro: não é permitido somar string com int
+int total = x + nome;
+
+// Erro: prioridade deve ser do tipo int, não string
+task "Revisar código" priority "alta";
+
+// Erro: nome da tarefa deve ser do tipo string, não int
+task 42 priority 1;
+
+// Erro: condição do if precisa ser uma comparação (booleana), não um int puro
+if (x) {
+    print("isso não deveria compilar");
+}

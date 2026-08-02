@@ -1,0 +1,9 @@
+// Este arquivo contém erros de sintaxe de propósito, para testar
+// a Análise Sintática.
+
+int x = 5   // faltando ';' ao final da declaração
+print(x);
+
+if (x > 0 {   // faltando ')' de fechamento da condição
+    print("positivo");
+}

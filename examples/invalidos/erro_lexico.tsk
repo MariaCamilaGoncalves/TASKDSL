@@ -1,0 +1,6 @@
+// Este arquivo contém um caractere inválido de propósito, para testar
+// a Análise Léxica (o compilador deve reportar a linha do erro).
+
+int x = 5;
+int y = @x;   // '@' não é um caractere válido em TaskLang
+print(y);

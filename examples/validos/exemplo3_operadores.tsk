@@ -1,0 +1,37 @@
+// Exemplo 3: operadores relacionais, lógicos (&&, ||, !) e unário,
+// além de condicionais aninhadas — recursos ainda não exercitados
+// nos exemplos 1 e 2. (Booleanos em TaskLang são sempre resultado de uma
+// expressão relacional/lógica: não existe um tipo "bool" declarável.)
+
+int horasDisponiveis = 6;
+int tarefasPendentes = 4;
+int temperaturaSensor = -5;
+
+task "Compilar projeto" priority 1;
+task "Rodar bateria de testes" priority 2;
+
+if (horasDisponiveis <= 4 || tarefasPendentes > 3) {
+    print("Alerta: risco de nao terminar a tempo.");
+
+    if (horasDisponiveis <= 4 && tarefasPendentes > 3) {
+        print("Situacao critica: pouco tempo E muitas tarefas.");
+    } else {
+        print("Situacao de atencao, mas ainda controlavel.");
+    }
+} else {
+    print("Cronograma sob controle.");
+}
+
+if (!(tarefasPendentes > 3)) {
+    print("Numero de tarefas pendentes esta ok.");
+}
+
+if (temperaturaSensor < 0) {
+    print("Leitura de sensor invalida (valor negativo).");
+    print(-temperaturaSensor);
+}
+
+assign "Compilar projeto" to "Mariana";
+complete "Compilar projeto";
+
+list tasks;
